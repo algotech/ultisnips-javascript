@@ -1,0 +1,27 @@
+priority -40
+
+snippet ngservice "Angular / Service" b
+angular.module('${1:module_name}').service('${2:service_name}', [
+  ${3:}
+  function(${4}) {
+	  this.${5} = function(${6}) {
+      ${7}
+    };${8}
+  }
+]);
+endsnippet
+
+snippet ngfactory "Angular / Factory" b
+angular.module('${1:module_name}').factory('${2:factory_name}', [
+  ${3:}
+  function(${4}) {
+    var api = {};
+
+    api.${5} = function(${6}) {
+      ${7}
+    };${8}
+
+    return api;
+  }
+]);
+endsnippet
