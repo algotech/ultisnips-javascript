@@ -1,0 +1,10 @@
+priority -40
+
+snippet ngcontroller "Angular / Controller" b
+angular.module('${1:module_name}').controller('${2:controller_name}', [
+  '$scope',${3:}
+  function($scope${4}) {
+    ${5}
+  }
+]);
+endsnippet
