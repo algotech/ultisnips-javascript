@@ -33,3 +33,19 @@ angular
 	}
 ]);
 endsnippet
+
+snippet ngservicetest "Angular / Service / Test" b
+describe('${1:service_name} service', function() {
+	beforeEach(module('${2:module_name}'));
+	${3}
+	beforeEach(inject(function($injector) {
+		${4}
+	}));
+
+	describe('${5}', function() {
+		it('${6}', function() {
+			${7}
+		});
+	});${8}
+});
+endsnippet
