@@ -12,3 +12,31 @@ angular
 	}
 ]);
 endsnippet
+
+snippet ngcontrollertest "Angular / Controller / Test" b
+describe('${1:controller_name} controller', function() {
+	beforeEach(module('${2:module_name}'));
+
+	var $controller;
+	var $rootScope;
+
+	var scope;
+	var controller;
+
+	beforeEach(inject(function($injector) {
+		$controller = $injector.get('$controller');
+		$rootScope = $injector.get('$rootScope');
+
+		scope = $rootScope.$new();
+		controller = $controller('${3:$1}', {
+			$scope: scope
+		});
+	}));
+
+	describe('${4}', function() {
+		it('${5}', function() {
+			${6}
+		});
+	});${7}
+});
+endsnippet
