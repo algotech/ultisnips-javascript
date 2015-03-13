@@ -14,3 +14,23 @@ angular
 	}
 ]);
 endsnippet
+
+snippet ngfiltertest "Angular / Filter / Test" b
+describe('${1:filter_name} filter', function() {
+	beforeEach(module('${2:module_name}'));
+
+	var $filter;
+	var filter;
+
+	beforeEach(inject(function($injector) {
+		$filter = $injector.get('$filter');
+		filter = $filter('${1/\w+\s*/\l$0/}');${3}
+	}));
+
+	describe('${4}', function() {
+		it('${5}', function() {
+			${6}
+		});
+	});${7}
+});
+endsnippet
